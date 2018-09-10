@@ -38,7 +38,7 @@ func main() {
   fmt.Println(d)
 
 
-  // A numeric constant has no type until it’s given one, such as by an explicit cast.
+  // A numeric constant has no type until it's given one, such as by an explicit cast.
   fmt.Println(int64(d))
 
 
