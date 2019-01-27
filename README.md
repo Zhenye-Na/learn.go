@@ -1,4 +1,5 @@
 # Learning Go
+
 :dizzy: Go Bootcamp
 
 ## Installing Go
@@ -8,12 +9,17 @@
 
 ## How to run `.go` file
 
+### Text Editor
+
 For example, you have a "hello_world.go" file, you can `cd` to the directory first, then run this command:
 
 ```sh
 go run hellow_world.go
 ```
 
+### GoLand
+
+Hit `Run` button.
 
 
 ## References
