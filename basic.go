@@ -7,7 +7,7 @@ var globalVar = 66
 
 var (
 	a = 1
-	b = "xingxingxing"
+	b = "66666"
 	c = true
 )
 
@@ -36,11 +36,61 @@ func variableSimplify() {
 	fmt.Println(i, j, a, b)
 }
 
+func consts() {
+	// 常量尽量不要大写，因为 Go 语言中，变量首字母大写代表"public"
+	const c = 10086
+	const word = "Harry Potter"
+	fmt.Println(c, word)
+}
+
+func enums() {
+
+	/*
+
+	`iota` identifier is used in const declarations to simplify
+	definitions of incrementing numbers.
+
+	The values of iota is reset to `0` whenever the reserved word
+	`const` appears in the source (i.e. each const block) and increments
+	by one after each ConstSpec e.g. each Line.
+
+	*/
+
+	const (
+		c = iota
+		cpp
+		java
+		python
+		matlab
+	)
+
+	fmt.Println(c, cpp, java, python, matlab)
+
+
+	const (
+		b = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+		pb
+	)
+
+	fmt.Println(b, kb, mb, gb, tb, pb)
+
+}
+
 func main() {
 	fmt.Println("Hello, World!")
+
 	variableDefault()
 	variableInitialVal()
 	variableTypeDeduction()
 	variableSimplify()
+
 	fmt.Println(a, b, c, globalVar)
+
+	consts()
+	enums()
+
 }
